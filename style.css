@@ -2105,3 +2105,87 @@ footer {
     }
 
 }
+/* ==========================================
+   КНОПКА "?"
+   ========================================== */
+
+.gearbox {
+    position: relative;
+}
+
+.gear-info {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    width: 22px;
+    height: 22px;
+
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 50%;
+
+    background: transparent;
+    color: rgba(255, 255, 255, 0.7);
+
+    font-size: 12px;
+    font-weight: 700;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.gear-info:hover {
+    color: white;
+    border-color: white;
+    transform: scale(1.08);
+}
+
+
+/* ==========================================
+   ОПИСАНИЕ КОРОБКИ
+   ========================================== */
+
+.gear-description {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: -75px;
+
+    z-index: 100;
+
+    padding: 12px 14px;
+
+    background: #111;
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    color: rgba(255, 255, 255, 0.85);
+
+    font-size: 12px;
+    line-height: 1.45;
+
+    box-sizing: border-box;
+
+    animation: gearInfoAppear 0.2s ease;
+}
+
+
+@keyframes gearInfoAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
